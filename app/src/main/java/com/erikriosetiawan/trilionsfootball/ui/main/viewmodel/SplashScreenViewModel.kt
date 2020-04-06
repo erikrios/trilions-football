@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Handler
 import androidx.lifecycle.ViewModel
+import com.erikriosetiawan.trilionsfootball.R
 import com.erikriosetiawan.trilionsfootball.ui.main.view.MainActivity
 
 class SplashScreenViewModel(private val activity: Activity) : ViewModel() {
@@ -16,9 +17,10 @@ class SplashScreenViewModel(private val activity: Activity) : ViewModel() {
     // Declare the handler and runnable
     private var handler: Handler? = null
     private val runnable: Runnable = Runnable {
-        // Start MainActivity and finish the current activity
+        // Start the MainActivity, add transition animation, and finish the current activity
         val intent = Intent(activity.baseContext, MainActivity::class.java)
         activity.startActivity(intent)
+        activity.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         activity.finish()
     }
 
