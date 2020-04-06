@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_splash_screen"
     android:padding="@dimen/activity_padding"
-    tools:context=".ui.main.view.SplashScreenActivity">
+    tools:context=".ui.main.view.SplashScreenActivity"
+    tools:viewBindingIgnore="true">
 
     <ImageView
         android:id="@+id/img_england_logo"
