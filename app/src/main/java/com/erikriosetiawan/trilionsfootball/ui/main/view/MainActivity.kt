@@ -1,7 +1,8 @@
-package com.erikriosetiawan.trilionsfootball
+package com.erikriosetiawan.trilionsfootball.ui.main.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.erikriosetiawan.trilionsfootball.R
 
 class MainActivity : AppCompatActivity() {
 
