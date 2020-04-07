@@ -2,6 +2,7 @@ package com.erikriosetiawan.trilionsfootball.ui.main.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.lifecycle.ViewModelProviders
 import com.erikriosetiawan.trilionsfootball.R
 import com.erikriosetiawan.trilionsfootball.ui.main.viewmodel.SplashScreenViewModel
@@ -13,6 +14,7 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         setUpViewModel()
+        setTransparentStatusBar()
     }
 
     /**
@@ -21,5 +23,15 @@ class SplashScreenActivity : AppCompatActivity() {
     private fun setUpViewModel() {
         val viewModelFactory = SplashScreenViewModelFactory(this)
         ViewModelProviders.of(this, viewModelFactory).get(SplashScreenViewModel::class.java)
+    }
+
+    /**
+     * Create transparent status bar
+     */
+    private fun setTransparentStatusBar() {
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        )
     }
 }
