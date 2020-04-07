@@ -39,6 +39,7 @@
                 android:background="@drawable/bg_title_background" />
 
             <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
                 app:contentInsetStart="0dp"
