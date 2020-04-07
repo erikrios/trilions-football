@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TriLions Football</string>
     <string name="england_logo">England National Teams Logo</string>
+    <string name="league_logo">League Logo</string>
 </resources>
