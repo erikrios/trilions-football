@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setUI()
     }
 
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             val league =
                 League(
                     strBadge = "https://www.thesportsdb.com/images/media/league/badge/i6o0kh1549879062.png",
-                    strLeague = "League name $i"
+                    strLeague = "England League name of Football $i"
                 )
             leagues.add(league)
         }
