@@ -35,7 +35,7 @@
             android:id="@+id/tv_league_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0dp"
+            android:layout_weight="0"
             android:fontFamily="@font/allerta_stencil"
             android:gravity="center"
             android:textSize="18sp"
