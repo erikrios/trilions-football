@@ -8,7 +8,7 @@ class LeagueLocalDataStore : LeagueDataStore {
     private var caches = mutableListOf<League>()
 
     override suspend fun getLeagues(): List<League>? =
-        if (caches.isEmpty()) caches
+        if (caches.isNotEmpty()) caches
         else null
 
     override suspend fun addAll(leagues: List<League>?) {

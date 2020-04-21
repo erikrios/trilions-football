@@ -1,7 +1,6 @@
 package com.erikriosetiawan.trilionsfootball.datastore.league
 
 import com.erikriosetiawan.trilionsfootball.data.model.League
-import com.erikriosetiawan.trilionsfootball.data.model.LeagueResponse
 import com.erikriosetiawan.trilionsfootball.webservices.TheSportDbService
 
 class LeagueRemoteDataStore(private val theSportDbService: TheSportDbService) : LeagueDataStore {
