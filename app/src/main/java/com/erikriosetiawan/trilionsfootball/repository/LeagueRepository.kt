@@ -13,4 +13,10 @@ class LeagueRepository private constructor() : BaseRepository<LeagueDataStore>()
         localDataStore?.addAll(response)
         return response as MutableList<League>
     }
+
+    companion object {
+        val instance by lazy {
+            LeagueRepository()
+        }
+    }
 }
