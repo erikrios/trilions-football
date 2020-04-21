@@ -1,6 +1,7 @@
 package com.erikriosetiawan.trilionsfootball.webservices
 
 import com.erikriosetiawan.trilionsfootball.data.model.LeagueResponse
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -10,5 +11,5 @@ interface TheSportDbService {
     suspend fun getLeagues(
         @Query("c") country: String,
         @Query("s") sport: String
-    ): LeagueResponse
+    ): Response<LeagueResponse>
 }
