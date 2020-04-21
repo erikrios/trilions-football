@@ -1,6 +1,8 @@
 package com.erikriosetiawan.trilionsfootball.ui.main.view
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -55,5 +57,17 @@ class MainActivity : AppCompatActivity() {
     private fun toggleLoading(loading: Boolean) {
         if (loading) binding.progressBar.visibility = View.VISIBLE
         else binding.progressBar.visibility = View.GONE
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.item_refresh -> viewModel.getLeagues()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
