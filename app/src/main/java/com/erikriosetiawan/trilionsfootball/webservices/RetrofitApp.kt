@@ -13,7 +13,7 @@ object RetrofitApp {
     private val logger = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 
     private val okHttp = OkHttpClient.Builder()
-        .callTimeout(15, TimeUnit.SECONDS)
+        .callTimeout(60, TimeUnit.SECONDS)
         .addInterceptor(logger)
 
     private val client = Retrofit.Builder()
