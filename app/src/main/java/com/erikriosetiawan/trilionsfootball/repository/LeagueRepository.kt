@@ -7,7 +7,8 @@ class LeagueRepository private constructor() : BaseRepository<LeagueDataStore>()
 
     suspend fun getLeagues(): MutableList<League>? {
         val cache = localDataStore?.getLeagues()
-        if (cache != null) return cache as MutableList<League>
+        if (cache != null)
+            return cache as MutableList<League>
         val response = remoteDataStore?.getLeagues()
         remoteDataStore?.getLeagues()
         localDataStore?.addAll(response)
