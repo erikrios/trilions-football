@@ -1,5 +1,9 @@
 package com.erikriosetiawan.trilionsfootball.data.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class League(
     val idLeague: String? = null,
     val strSport: String? = null,
@@ -14,4 +18,4 @@ data class League(
     val strDescriptionEN: String? = null,
     val strBadge: String? = null,
     val strLogo: String? = null
-)
+) : Parcelable
