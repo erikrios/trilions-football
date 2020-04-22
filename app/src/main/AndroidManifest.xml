@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
+        <activity android:name=".ui.main.view.LeagueDetailActivity"></activity>
         <activity
             android:name=".ui.main.view.SplashScreenActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
