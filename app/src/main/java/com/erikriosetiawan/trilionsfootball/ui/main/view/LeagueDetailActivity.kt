@@ -25,7 +25,7 @@ class LeagueDetailActivity : AppCompatActivity() {
     private fun showData() {
         val league = getDataIntent()
         league?.apply {
-            Picasso.get().load(strLogo).into(binding.imgLeagueLogo)
+            Picasso.get().load(strBadge).into(binding.imgLeagueLogo)
             binding.tvLeagueName.text = strLeague
             binding.tvLeagueDescription.text = strDescriptionEN
         }
