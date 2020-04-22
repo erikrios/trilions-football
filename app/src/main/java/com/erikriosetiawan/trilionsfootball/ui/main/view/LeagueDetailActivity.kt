@@ -1,8 +1,7 @@
 package com.erikriosetiawan.trilionsfootball.ui.main.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.erikriosetiawan.trilionsfootball.R
+import androidx.appcompat.app.AppCompatActivity
 import com.erikriosetiawan.trilionsfootball.databinding.ActivityLeagueDetailBinding
 
 class LeagueDetailActivity : AppCompatActivity() {
