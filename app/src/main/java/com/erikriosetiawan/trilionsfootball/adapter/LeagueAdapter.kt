@@ -1,6 +1,7 @@
 package com.erikriosetiawan.trilionsfootball.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -8,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.erikriosetiawan.trilionsfootball.R
 import com.erikriosetiawan.trilionsfootball.data.model.League
 import com.erikriosetiawan.trilionsfootball.databinding.ItemLeagueBinding
+import com.erikriosetiawan.trilionsfootball.ui.main.view.LeagueDetailActivity
+import com.erikriosetiawan.trilionsfootball.ui.main.view.LeagueDetailActivity.Companion.DATA_LEAGUE_KEY
 import com.squareup.picasso.Picasso
 
 class LeagueAdapter(private val context: Context, private val leagues: List<League>) :
@@ -23,7 +26,9 @@ class LeagueAdapter(private val context: Context, private val leagues: List<Leag
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) =
         holder.bind(leagues[position], position) {
-            // Intent code here
+            val intent = Intent(context, LeagueDetailActivity::class.java)
+            intent.putExtra(DATA_LEAGUE_KEY, it)
+            context.startActivity(intent)
         }
 
     inner class ViewHolder(private val binding: ItemLeagueBinding) :
