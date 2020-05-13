@@ -61,7 +61,7 @@ dependencies {
     implementation 'android.arch.lifecycle:extensions:1.1.1'
 
     // Recycler View
-    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha02'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha03'
 
     // Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
